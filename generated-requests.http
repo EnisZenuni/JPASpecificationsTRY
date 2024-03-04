@@ -1,0 +1,33 @@
+POST http://localhost:8080/movies
+Content-Type: application/json
+
+{
+  "title": "Avengers",
+  "description": "A movie about Thor,Iron Man  and Captain America",
+  "genre": ["Romance", "Thriller"],
+  "releaseYear": "2014"
+}
+###
+GET http://localhost:8080/movies
+
+###
+GET http://localhost:8080/movies/{id}
+
+###
+POST http://localhost:8080/movies/{id}/review
+Content-Type: application/json
+
+{
+  "description": "Average",
+  "rating": 7
+}
+
+###
+# curl -X GET "http://your-api-url/movies?page=0&size=10&title=YourMovieTitle&genre=Action&genres=Genre1&genres=Genre2&releaseYear=2022&fromYear=2010&toYear=2022" -H "accept: application/json"
+GET http://localhost:8080/movies?page=0&size=10&
+    releaseYear=2010&fromYear=2010&toYear=2015
+accept: application/json
+
+###
+
+GET http://localhost:8080/?page=0&size=10&title=Avengers
